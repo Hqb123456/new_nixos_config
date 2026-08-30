@@ -1,9 +1,8 @@
 { config, lib, pkgs, ... }:
 
 {
-	boot.plymouth.enable = true;
 	boot.loader = {
-		grub = { 
+		grub = {
 			enable = true;
 			efiSupport = true;
 			device = "nodev";
@@ -15,5 +14,5 @@
 	};
 
 # ========== 内核配置 ==========
-	boot.kernelPackages = pkgs.linuxPackages_latest;  
+	boot.kernelPackages = pkgs.linuxPackages_latest;
 }
