@@ -9,6 +9,8 @@
 		wget
 		curl
 		git
+    links2
+    ghostscript  # DocView 默认使用 Ghostscript 进行转换
     cmake
     libtool
     gnumake
