@@ -12,6 +12,8 @@
     cmake
     libtool
     gnumake
+    cmake
+    ninja
     gcc
 		clang-tools
 		clang
