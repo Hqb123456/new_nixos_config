@@ -20,7 +20,8 @@
 		clang-tools
 		clang
 		nil
-		lua-language-server
+    lua-language-server
+    bash-language-server
     gdb
 		lldb
 		xwayland-satellite
