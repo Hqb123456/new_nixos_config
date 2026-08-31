@@ -7,6 +7,7 @@
 		noto-fonts-cjk-sans
 		noto-fonts-color-emoji
 		nerd-fonts.jetbrains-mono
+    nerd-fonts.iosevka
 		iosevka
 	];
 }
