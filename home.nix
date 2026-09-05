@@ -7,6 +7,7 @@
 
 # 安装软件包
 	home.packages = with pkgs; [
+		ascii
 		ctags
 		lazygit
 		tree
