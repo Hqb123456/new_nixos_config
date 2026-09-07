@@ -52,4 +52,11 @@
   # ========== 蓝牙 ==========
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
+
+  swapDevices = [
+    {
+      device = "/swapfile";
+      size = 8192;  # 单位 MB，即 8GB，按需调整
+    }
+  ];
 }
