@@ -7,6 +7,9 @@
 
 # 安装软件包
 	home.packages = with pkgs; [
+		neovide
+		ghostty
+		hmcl
 		starship
 			eza
 			ascii
@@ -54,4 +57,83 @@
 		enableBashIntegration = true;  # 如果用 Bash
 			enableZshIntegration = true;   # 如果用 Zsh
 	};
+
+	programs.nixvim = {
+  enable = true;
+
+  globals.mapleader = " ";
+
+  colorschemes.catppuccin = {
+    enable = true;
+    settings = {
+      flavour = "mocha";
+      transparent_background = false;
+    };
+  };
+
+  plugins = {
+    # 代码补全
+    cmp = {
+      enable = true;
+      settings.sources = [
+        { name = "nvim_lsp"; }
+        { name = "buffer"; }
+        { name = "path"; }
+      ];
+    };
+    cmp-nvim-lsp.enable = true;
+    cmp-buffer.enable = true;
+    cmp-path.enable = true;
+    luasnip.enable = true;
+
+    # 文件搜索与导航
+    telescope.enable = true;
+
+    # 文件树
+    nvim-tree.enable = true;
+
+    # 语法高亮与解析
+    treesitter = {
+      enable = true;
+      highlight.enable = true;
+      indent.enable = true;
+      folding.enable = true;
+    };
+
+    # Git 集成
+    gitsigns.enable = true;
+
+    # 状态栏
+    lualine.enable = true;
+
+    # 键位提示
+    which-key.enable = true;
+
+    # UI 增强
+    notify.enable = true;
+
+    # 编辑增强
+    nvim-autopairs.enable = true;
+    comment.enable = true;
+  };
+
+  # LSP 配置
+  lsp.servers = {
+    nil_ls.enable = true;
+    lua_ls.enable = true;
+    clangd = {
+      enable = true;
+      config = {
+        cmd = [ "clangd" "--background-index" "--clang-tidy" ];
+        root_markers = [ "compile_commands.json" "compile_flags.txt" ".git" ];
+      };
+    };
+  };
+
+  # 编辑器选项（与 lsp、plugins 平级）
+  opts = {
+    number = true;
+    relativenumber = true;
+  };
+};
 }
