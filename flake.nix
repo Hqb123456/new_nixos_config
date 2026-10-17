@@ -11,17 +11,19 @@
 			url = "git+https://gh-proxy.org/https://github.com/noctalia-dev/noctalia.git?ref=cachix&shallow=1";
 		};
 
-		nixvim = {
-			url = "git+https://gh-proxy.org/https://github.com/nix-community/nixvim.git?ref=main&shallow=1";
+		caelestia-shell = {
+      url = "git+https://gh-proxy.org/https://github.com/caelestia-dots/shell";
+			# url = "github:caelestia-dots/shell";
+			inputs.nixpkgs.follows = "nixpkgs-unstable";  # 关键修正：跟随你实际使用的 nixpkgs
 		};
 
 		kwin-effects-better-blur-dx = {
 			url = "github:xarblu/kwin-effects-better-blur-dx";
-			inputs.nixpkgs.follows = "nixpkgs-unstable"; # 确保使用同一套 nixpkgs
+			inputs.nixpkgs.follows = "nixpkgs-unstable";
 		};
 	};
 
-	outputs = { self, nixpkgs-unstable, home-manager, noctalia, nixvim,kwin-effects-better-blur-dx, ... }:
+	outputs = { self, nixpkgs-unstable, home-manager, noctalia, caelestia-shell, kwin-effects-better-blur-dx, ... }:
 		let
 			lib = nixpkgs-unstable.lib;
 		in
@@ -29,7 +31,7 @@
 			nixosConfigurations.nixos = lib.nixosSystem {
 				system = "x86_64-linux";
 				specialArgs = {
-					inherit home-manager noctalia nixvim kwin-effects-better-blur-dx;
+					inherit home-manager noctalia caelestia-shell kwin-effects-better-blur-dx;
 				};
 				modules = [
 					home-manager.nixosModules.default
@@ -37,17 +39,17 @@
 						home-manager = {
 							useGlobalPkgs = true;
 							useUserPackages = true;
-							backupFileExtension = "bak";  # 添加这行，会自动备份原文件为 config.fish.backup
+							backupFileExtension = "bak";
+							extraSpecialArgs = { inherit caelestia-shell; };  # 让 home.nix 能拿到 inputs.caelestia-shell
 							users.shorin = {
-								imports = [
-									nixvim.homeManagerModules.nixvim
-									./home.nix
-								];
+							imports = [
+								./home.nix
+							];
 							};
 						};
 					}
-					./configuration.nix  # 这个作为 modules 数组的最后一个元素
-					noctalia.nixosModules.default  # 直接在这里导入
+					./configuration.nix
+					noctalia.nixosModules.default
 				];
 			};
 		};

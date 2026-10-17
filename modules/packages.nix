@@ -2,6 +2,8 @@
 
 {
 	environment.systemPackages = with pkgs; [
+    brightnessctl
+    playerctl
 		chromium
 		vim
 		wget

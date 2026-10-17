@@ -15,6 +15,7 @@
 
 	environment.sessionVariables = {
 #GTK_IM_MODULE = "fcitx";
+  		GTK_ICON_THEME = "Adwaita";
 		QT_IM_MODULE = "fcitx";
 		XMODIFIERS = "@im=fcitx";
 	};
