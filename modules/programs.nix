@@ -1,6 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
+	programs.gpu-screen-recorder.enable = true;
 	programs.firefox.enable = true;
 
 	programs.pay-respects = {
@@ -25,9 +26,9 @@
 		enable = true;
 	};
 
-  programs.hyprland = {
-    enable = true;
-  };
+	programs.hyprland = {
+		enable = true;
+	};
 
 	programs.nh = {
 		enable = true;
