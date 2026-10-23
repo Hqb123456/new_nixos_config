@@ -21,9 +21,11 @@
 			url = "github:xarblu/kwin-effects-better-blur-dx";
 			inputs.nixpkgs.follows = "nixpkgs-unstable";
 		};
+
+    denial.url = "git+https://gh-proxy.org/https://github.com/denialwm/denial";
 	};
 
-	outputs = { self, nixpkgs-unstable, home-manager, noctalia, caelestia-shell, kwin-effects-better-blur-dx, ... }:
+	outputs = { self, nixpkgs-unstable, home-manager, noctalia, caelestia-shell, kwin-effects-better-blur-dx, denial , ... }:
 		let
 			lib = nixpkgs-unstable.lib;
 		in
@@ -34,6 +36,11 @@
 					inherit home-manager noctalia caelestia-shell kwin-effects-better-blur-dx;
 				};
 				modules = [
+          denial.nixosModules.default
+          {
+            programs.denial.enable = true;
+            programs.denial.plugins.enable = true; # 可选：安装插件管理器
+          }
 					home-manager.nixosModules.default
 					{
 						home-manager = {
