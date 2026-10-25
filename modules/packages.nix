@@ -2,7 +2,8 @@
 
 {
 	environment.systemPackages = with pkgs; [
-		gpu-screen-recorder
+		winboat
+			gpu-screen-recorder
 			brightnessctl
 			playerctl
 			chromium

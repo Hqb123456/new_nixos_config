@@ -11,53 +11,50 @@
 			url = "git+https://gh-proxy.org/https://github.com/noctalia-dev/noctalia.git?ref=cachix&shallow=1";
 		};
 
+# caelestia-shell = {
+#   url = "git+https://gh-proxy.org/https://github.com/caelestia-dots/shell";
+# 	# url = "github:caelestia-dots/shell";
+# 	inputs.nixpkgs.follows = "nixpkgs-unstable";  # 关键修正：跟随你实际使用的 nixpkgs
+# };
 		caelestia-shell = {
-      url = "git+https://gh-proxy.org/https://github.com/caelestia-dots/shell";
-			# url = "github:caelestia-dots/shell";
-			inputs.nixpkgs.follows = "nixpkgs-unstable";  # 关键修正：跟随你实际使用的 nixpkgs
+			url = "git+https://gh-proxy.org/https://github.com/caelestia-dots/shell";
+			inputs.nixpkgs.follows = "nixpkgs-unstable";
+			inputs.caelestia-cli.url = "git+https://gh-proxy.org/https://github.com/caelestia-dots/cli";
 		};
-
 		kwin-effects-better-blur-dx = {
 			url = "github:xarblu/kwin-effects-better-blur-dx";
 			inputs.nixpkgs.follows = "nixpkgs-unstable";
 		};
-
-    denial.url = "git+https://gh-proxy.org/https://github.com/denialwm/denial";
 	};
 
-	outputs = { self, nixpkgs-unstable, home-manager, noctalia, caelestia-shell, kwin-effects-better-blur-dx, denial , ... }:
+	outputs = { self, nixpkgs-unstable, home-manager, noctalia, caelestia-shell, kwin-effects-better-blur-dx, ... }:
 		let
-			lib = nixpkgs-unstable.lib;
-		in
+		lib = nixpkgs-unstable.lib;
+	in
+	{
+		nixosConfigurations.nixos = lib.nixosSystem {
+			system = "x86_64-linux";
+			specialArgs = {
+				inherit home-manager noctalia caelestia-shell kwin-effects-better-blur-dx;
+			};
+			modules = [
+			home-manager.nixosModules.default
 			{
-			nixosConfigurations.nixos = lib.nixosSystem {
-				system = "x86_64-linux";
-				specialArgs = {
-					inherit home-manager noctalia caelestia-shell kwin-effects-better-blur-dx;
-				};
-				modules = [
-          denial.nixosModules.default
-          {
-            programs.denial.enable = true;
-            programs.denial.plugins.enable = true; # 可选：安装插件管理器
-          }
-					home-manager.nixosModules.default
-					{
-						home-manager = {
-							useGlobalPkgs = true;
-							useUserPackages = true;
-							backupFileExtension = "bak";
-							extraSpecialArgs = { inherit caelestia-shell; };  # 让 home.nix 能拿到 inputs.caelestia-shell
-							users.shorin = {
+				home-manager = {
+					useGlobalPkgs = true;
+					useUserPackages = true;
+					backupFileExtension = "bak";
+					extraSpecialArgs = { inherit caelestia-shell; };  # 让 home.nix 能拿到 inputs.caelestia-shell
+						users.shorin = {
 							imports = [
 								./home.nix
 							];
-							};
 						};
-					}
-					./configuration.nix
-					noctalia.nixosModules.default
+				};
+			}
+			./configuration.nix
+				noctalia.nixosModules.default
 				];
-			};
 		};
+	};
 }

@@ -11,17 +11,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1791609844,
-        "narHash": "sha256-SHgkXo3bVca+AjacDdyfy9uCpG9SiVWCOyKCsejryA8=",
-        "owner": "caelestia-dots",
-        "repo": "cli",
-        "rev": "b9a223a2cb7d98e67dd1219e16d67dda9ac4d052",
-        "type": "github"
+        "lastModified": 1792841684,
+        "narHash": "sha256-e5NI28/bKQ6EmjC1E46LiSzU7yT04iXdT0T7liPSBGo=",
+        "ref": "refs/heads/main",
+        "rev": "679af941c03f1899d017964c654f57d71cec47e5",
+        "revCount": 722,
+        "type": "git",
+        "url": "https://gh-proxy.org/https://github.com/caelestia-dots/cli"
       },
       "original": {
-        "owner": "caelestia-dots",
-        "repo": "cli",
-        "type": "github"
+        "type": "git",
+        "url": "https://gh-proxy.org/https://github.com/caelestia-dots/cli"
       }
     },
     "caelestia-shell": {
@@ -34,54 +34,17 @@
         "quickshell": "quickshell"
       },
       "locked": {
-        "lastModified": 1791805117,
-        "narHash": "sha256-3znKolqcI99Wdka+Ysg39Y/oWqjBqp8QGCXo6zd54b0=",
+        "lastModified": 1792802218,
+        "narHash": "sha256-B73kuZL9C24fMIMQXUp/CG7wtINwQcziJZNrHGVVEh4=",
         "ref": "refs/heads/main",
-        "rev": "a3a8fe59aba2c0048ab02dc817748678f96076ff",
-        "revCount": 2684,
+        "rev": "2e1c51fa76d94457624b642c678218970aa2517a",
+        "revCount": 2710,
         "type": "git",
         "url": "https://gh-proxy.org/https://github.com/caelestia-dots/shell"
       },
       "original": {
         "type": "git",
         "url": "https://gh-proxy.org/https://github.com/caelestia-dots/shell"
-      }
-    },
-    "denial": {
-      "inputs": {
-        "denialPlugins": "denialPlugins",
-        "nixpkgs": "nixpkgs",
-        "nixpkgsUnstable": "nixpkgsUnstable"
-      },
-      "locked": {
-        "lastModified": 1791743110,
-        "narHash": "sha256-GiqXlN1eb1IuzHcdjiNJa626Bpcwj9HssqcQeDbSwe4=",
-        "ref": "refs/heads/main",
-        "rev": "c96375a190a200b6343868afc42d4492b6badb9d",
-        "revCount": 212,
-        "type": "git",
-        "url": "https://gh-proxy.org/https://github.com/denialwm/denial"
-      },
-      "original": {
-        "type": "git",
-        "url": "https://gh-proxy.org/https://github.com/denialwm/denial"
-      }
-    },
-    "denialPlugins": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1790795186,
-        "narHash": "sha256-nidfJBJvh/r60vhYDytNumZQyLAiIyCf+QB0ECiBV60=",
-        "owner": "denialwm",
-        "repo": "denial-plugins",
-        "rev": "4b7adf998852b09b9a91c1cfab48be58debf2e80",
-        "type": "github"
-      },
-      "original": {
-        "owner": "denialwm",
-        "repo": "denial-plugins",
-        "rev": "4b7adf998852b09b9a91c1cfab48be58debf2e80",
-        "type": "github"
       }
     },
     "home-manager": {
@@ -91,10 +54,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1792098797,
-        "narHash": "sha256-u4DIIZgznEGzByxXrxWCXK19VcMtTBmi/M9gZ7Jk9bM=",
+        "lastModified": 1792818371,
+        "narHash": "sha256-yhEZAzZRNvzYpoAlyFY3wM75V9BmkIXJIueof8S5gOg=",
         "ref": "master",
-        "rev": "640725978b99076e18e069f6e7d2959124584f8f",
+        "rev": "2cd3234928f60bbff695a7ee56115ef7799c47cd",
         "shallow": true,
         "type": "git",
         "url": "https://gh-proxy.org/https://github.com/nix-community/home-manager.git"
@@ -151,75 +114,43 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1789542786,
-        "narHash": "sha256-ajQuqcxnj6RYnwCjA/9FTCnrdR2+BDzstE8UembXf60=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "4c7870105e7f1fdf9c48688c8d7efc21abf0688a",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixos-26.05",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs-unstable": {
-      "locked": {
-        "lastModified": 1792116957,
-        "narHash": "sha256-EjZqHKObBfIOeHZnMRVV87HB3pPq/WBkmRJWyFxmZu8=",
-        "ref": "nixpkgs-unstable",
-        "rev": "f20cd90e28fe0403873f473b29e42662cd86e8c4",
-        "shallow": true,
-        "type": "git",
-        "url": "https://mirrors.tuna.tsinghua.edu.cn/git/nixpkgs.git"
-      },
-      "original": {
-        "ref": "nixpkgs-unstable",
-        "shallow": true,
-        "type": "git",
-        "url": "https://mirrors.tuna.tsinghua.edu.cn/git/nixpkgs.git"
-      }
-    },
-    "nixpkgsUnstable": {
-      "locked": {
-        "lastModified": 1790689126,
-        "narHash": "sha256-ilerN1WLSvF+HMjziC/Wv99J5y02maDH+6hZPwsORKg=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "b4fd65b198c599cbe814fcb9f42d25d021595ec9",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_2": {
-      "locked": {
-        "lastModified": 1791594108,
-        "narHash": "sha256-V0WmebqwEeAVZMqxfv7Dq7hpKkPPM19W50xQf3D1Kf4=",
-        "rev": "6510408d147d8c5e6d76043e899e9251756f6a75",
+        "lastModified": 1792773339,
+        "narHash": "sha256-17eNBI5Khe4JZaRkL5hRGPWf8MZ6qv+bWAr4V8YeKBw=",
+        "rev": "3ec636362e1816bc2f0888fa0fa2c69f1bc9e504",
         "type": "tarball",
-        "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1089111.6510408d147d/nixexprs.tar.zst"
+        "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1100280.3ec636362e18/nixexprs.tar.zst"
       },
       "original": {
         "type": "tarball",
         "url": "https://channels.nixos.org/nixos-unstable/nixexprs.tar.zst"
       }
     },
+    "nixpkgs-unstable": {
+      "locked": {
+        "lastModified": 1792782095,
+        "narHash": "sha256-KtL+p7f7jY34cO5Mt0/hUZNE3spnINk7hwpYxM2XLC4=",
+        "ref": "nixpkgs-unstable",
+        "rev": "901c54c08bdc20e00c2b3c73716b97497b1b3c74",
+        "shallow": true,
+        "type": "git",
+        "url": "https://mirrors.tuna.tsinghua.edu.cn/git/nixpkgs.git"
+      },
+      "original": {
+        "ref": "nixpkgs-unstable",
+        "shallow": true,
+        "type": "git",
+        "url": "https://mirrors.tuna.tsinghua.edu.cn/git/nixpkgs.git"
+      }
+    },
     "noctalia": {
       "inputs": {
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1792201829,
-        "narHash": "sha256-vdgfkwuM0goTgsL17YLKjbHHz0/pWovLes0Ukps0Yos=",
+        "lastModified": 1792889543,
+        "narHash": "sha256-nuh4jmSHXSWomoftfRznQjX4K+R/1sicKsIc8Pl+/lk=",
         "ref": "cachix",
-        "rev": "ea968f9fcfe498c559a04e193cc6161382fbc276",
+        "rev": "eda0553a19341597c2328bd8cb71be8b509123d4",
         "shallow": true,
         "type": "git",
         "url": "https://gh-proxy.org/https://github.com/noctalia-dev/noctalia.git"
@@ -239,11 +170,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1791448974,
-        "narHash": "sha256-lPbqsyAD5ZoGFMZ1eqAlTULfeP5Nwhy+XvOowF7BE+E=",
+        "lastModified": 1792651682,
+        "narHash": "sha256-TiCGqLMpNIy7FERewgfKVluPsLVF96uc6x6xwZnMjdQ=",
         "ref": "refs/heads/master",
-        "rev": "4f508be500dea6e5732cc3d50382a0048b17e7b1",
-        "revCount": 868,
+        "rev": "9b0f339b19057f4731bf3b48293307d7ef241671",
+        "revCount": 879,
         "type": "git",
         "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
       },
@@ -255,7 +186,6 @@
     "root": {
       "inputs": {
         "caelestia-shell": "caelestia-shell",
-        "denial": "denial",
         "home-manager": "home-manager",
         "kwin-effects-better-blur-dx": "kwin-effects-better-blur-dx",
         "nixpkgs-unstable": "nixpkgs-unstable",

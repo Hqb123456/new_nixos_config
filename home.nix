@@ -11,7 +11,8 @@
 
 # 安装软件包
 	home.packages = with pkgs; [
-		folia-major
+		vlc
+			folia-major
 			ghostty
 			hmcl
 			starship

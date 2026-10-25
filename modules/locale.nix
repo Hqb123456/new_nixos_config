@@ -14,8 +14,9 @@
 	};
 
 	environment.sessionVariables = {
+		LIBVA_DRIVER_NAME = "iHD";
 #GTK_IM_MODULE = "fcitx";
-  		GTK_ICON_THEME = "Adwaita";
+		GTK_ICON_THEME = "Adwaita";
 		QT_IM_MODULE = "fcitx";
 		XMODIFIERS = "@im=fcitx";
 	};
