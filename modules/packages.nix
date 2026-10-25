@@ -3,6 +3,7 @@
 {
 	environment.systemPackages = with pkgs; [
 		winboat
+      nvd
 			gpu-screen-recorder
 			brightnessctl
 			playerctl
