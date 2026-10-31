@@ -1,6 +1,13 @@
 { config, lib, pkgs, ... }:
 
 {
+	programs.clash-verge = {
+		enable = true;
+		serviceMode = true;
+		tunMode = true;
+		autoStart = true; # 可选：开机自启
+	};
+
 	programs.gpu-screen-recorder.enable = true;
 	programs.firefox.enable = true;
 

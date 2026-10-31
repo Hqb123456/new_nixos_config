@@ -9,6 +9,7 @@
 
 		noctalia = {
 			url = "git+https://gh-proxy.org/https://github.com/noctalia-dev/noctalia.git?ref=cachix&shallow=1";
+			inputs.nixpkgs.follows = "nixpkgs-unstable";  # 加上这一行
 		};
 
 # caelestia-shell = {
