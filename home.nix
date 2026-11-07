@@ -23,7 +23,7 @@
 			tree
 			btop
 			yazi
-			opencode
+			#opencode
 			bat
 			fd                     # 添加 fd，用于文件搜索
 			ripgrep

@@ -28,7 +28,7 @@
 			lldb
 			xwayland-satellite
 			kdePackages.qtstyleplugin-kvantum
-			kwin-effects-better-blur-dx.packages.${pkgs.system}.default
+			kwin-effects-better-blur-dx.packages.${pkgs.stdenv.hostPlatform.system}.default
 			bibata-cursors
 			xclip
 			xdotool

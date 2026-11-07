@@ -26,6 +26,7 @@
 		extraPackages = with pkgs; [
 			intel-media-driver # Raptor Lake 核显所需的现代驱动
 				intel-vaapi-driver # 作为后备，通常不主要使用
+				vpl-gpu-rt
 		];
 	};
 

@@ -1,6 +1,12 @@
 { config, lib, pkgs, ... }:
 
 {
+	programs.obs-studio = {
+		enable = true;
+		plugins = with pkgs.obs-studio-plugins; [
+			obs-pipewire-audio-capture
+		];
+	};
 	programs.clash-verge = {
 		enable = true;
 		serviceMode = true;
