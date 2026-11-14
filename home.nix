@@ -23,7 +23,7 @@
 			tree
 			btop
 			yazi
-			#opencode
+#opencode
 			bat
 			fd                     # 添加 fd，用于文件搜索
 			ripgrep
@@ -46,21 +46,18 @@
 			 })
 	];
 
-	programs.zoxide = {
+	programs.zsh={
 		enable = true;
-		package = pkgs.zoxide;
-		enableBashIntegration = true;
-		enableZshIntegration = true;
-		options = [ "--cmd cd" ];
-	};
+		enableCompletion = true;
+		autosuggestion.enable = true;
+		syntaxHighlighting.enable = true;
 
-	programs.fzf = {
-		enable = true;
-		package = pkgs.fzf;
-		enableBashIntegration = true;
-		enableZshIntegration = true;
+		oh-my-zsh = {
+			enable = true;
+			plugins = [ "sudo" "git" "z"]; # 按需添加插件
+				theme = "aussiegeek";        # 指定主题
+		};
 	};
-
 	programs.caelestia = {
 		enable = true;
 		cli.enable = true;
