@@ -54,10 +54,16 @@
 
 		oh-my-zsh = {
 			enable = true;
-			plugins = [ "sudo" "git" "z"]; # 按需添加插件
-				theme = "aussiegeek";        # 指定主题
+			plugins = [ "sudo" "git" "z" "extract" "fzf" "docker" "colored-man-pages" "history-substring-search" "web-search"]; # 按需添加插件
+				theme = "junkfood";        # 指定主题
 		};
 	};
+
+	programs.fzf = {
+		enable = true;
+		enableZshIntegration = true;
+	};
+
 	programs.caelestia = {
 		enable = true;
 		cli.enable = true;

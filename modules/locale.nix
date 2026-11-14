@@ -1,6 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
+	programs.msime.enable = true;
 	i18n.inputMethod = {
 		type = "fcitx5";
 		enable = true;

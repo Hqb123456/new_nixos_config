@@ -47,6 +47,21 @@
         "url": "https://gh-proxy.org/https://github.com/caelestia-dots/shell"
       }
     },
+    "crane": {
+      "locked": {
+        "lastModified": 1791754810,
+        "narHash": "sha256-cN0Mgk+sQtCJcGWs9H4M0CnLRAuC4I8aCwiBTcBJs6E=",
+        "owner": "ipetkov",
+        "repo": "crane",
+        "rev": "bd63bf1d0a0f6dcacd7549c714a671ee63b0db6a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ipetkov",
+        "repo": "crane",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -109,6 +124,28 @@
         "owner": "soramanew",
         "repo": "m3shapes",
         "rev": "32ad9ce328bb77ed349b40a3be10ee9ea610b8ab",
+        "type": "github"
+      }
+    },
+    "msime": {
+      "inputs": {
+        "crane": "crane",
+        "nixpkgs": [
+          "nixpkgs-unstable"
+        ],
+        "rust-overlay": "rust-overlay"
+      },
+      "locked": {
+        "lastModified": 1794648467,
+        "narHash": "sha256-OEgEsgaqBIx0P1iWT6uQ6MqSw+j/Xf1LpGO14HdPmYA=",
+        "owner": "metasequoiaime",
+        "repo": "msime",
+        "rev": "a23beb07161d04096055d7c407a7148e059a237a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "metasequoiaime",
+        "repo": "msime",
         "type": "github"
       }
     },
@@ -177,8 +214,30 @@
         "caelestia-shell": "caelestia-shell",
         "home-manager": "home-manager",
         "kwin-effects-better-blur-dx": "kwin-effects-better-blur-dx",
+        "msime": "msime",
         "nixpkgs-unstable": "nixpkgs-unstable",
         "noctalia": "noctalia"
+      }
+    },
+    "rust-overlay": {
+      "inputs": {
+        "nixpkgs": [
+          "msime",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1792307278,
+        "narHash": "sha256-wJgFFtw/vlzsjWrQFmTn40TTkSkqHM4XXN0nh4q4uMk=",
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "rev": "42076d1c6a0fb405ed04f9a674e4a8f69de62ba3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "type": "github"
       }
     },
     "systems": {

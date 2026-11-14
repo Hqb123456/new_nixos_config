@@ -2,8 +2,9 @@
 
 {
 	environment.systemPackages = with pkgs; [
-		winboat
-      nvd
+		nix-index
+			winboat
+			nvd
 			gpu-screen-recorder
 			brightnessctl
 			playerctl

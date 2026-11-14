@@ -17,6 +17,7 @@
 		./modules/noctalia.nix
 		./modules/test.nix
 		./modules/virtualisation.nix
+    ./modules/security.nix
 ];
 
 	system.stateVersion = "26.05";

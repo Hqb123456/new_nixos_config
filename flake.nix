@@ -26,9 +26,14 @@
 			url = "github:xarblu/kwin-effects-better-blur-dx";
 			inputs.nixpkgs.follows = "nixpkgs-unstable";
 		};
+
+		msime = {
+			url = "github:metasequoiaime/msime";
+			inputs.nixpkgs.follows = "nixpkgs-unstable";
+		};
 	};
 
-	outputs = { self, nixpkgs-unstable, home-manager, noctalia, caelestia-shell, kwin-effects-better-blur-dx, ... }:
+	outputs = { self, nixpkgs-unstable, home-manager, noctalia, caelestia-shell, kwin-effects-better-blur-dx, msime, ... }:
 		let
 		lib = nixpkgs-unstable.lib;
 	in
@@ -39,23 +44,24 @@
 				inherit home-manager noctalia caelestia-shell kwin-effects-better-blur-dx;
 			};
 			modules = [
-			home-manager.nixosModules.default
-			{
-				home-manager = {
-					useGlobalPkgs = true;
-					useUserPackages = true;
-					backupFileExtension = "bak";
-					extraSpecialArgs = { inherit caelestia-shell; };  # 让 home.nix 能拿到 inputs.caelestia-shell
-						users.shorin = {
-							imports = [
-								./home.nix
-							];
-						};
-				};
-			}
+				home-manager.nixosModules.default
+				{
+					home-manager = {
+						useGlobalPkgs = true;
+						useUserPackages = true;
+						backupFileExtension = "bak";
+						extraSpecialArgs = { inherit caelestia-shell; };  # 让 home.nix 能拿到 inputs.caelestia-shell
+							users.shorin = {
+								imports = [
+									./home.nix
+								];
+							};
+					};
+				}
 			./configuration.nix
 				noctalia.nixosModules.default
-				];
+				msime.nixosModules.default
+			];
 		};
 	};
 }
