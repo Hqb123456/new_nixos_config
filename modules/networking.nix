@@ -10,4 +10,7 @@
 			iifname { "Mihomo" } accept comment "trusted interface"
 			'';
 	};
+	networking.firewall.allowedTCPPorts = [
+		7897
+	];
 }

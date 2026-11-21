@@ -1,53 +1,66 @@
+
 { config, lib, pkgs, ... }:
 
 {
-	programs.obs-studio = {
-		enable = true;
-		plugins = with pkgs.obs-studio-plugins; [
-			obs-pipewire-audio-capture
-		];
-	};
-	programs.clash-verge = {
-		enable = true;
-		serviceMode = true;
-		tunMode = true;
-		autoStart = true; # 可选：开机自启
-	};
+  programs.obs-studio = {
+    enable = true;
+    plugins = with pkgs.obs-studio-plugins; [
+      obs-pipewire-audio-capture
+    ];
+  };
 
-	programs.gpu-screen-recorder.enable = true;
-	programs.firefox.enable = true;
+  programs.clash-verge = {
+    enable = true;
+    serviceMode = true;
+    tunMode = true;
+    autoStart = true;
+  };
 
-	programs.pay-respects = {
-		enable = true;
-		alias = "fcm";
-	};
+  programs.gpu-screen-recorder.enable = true;
+  programs.firefox.enable = true;
 
-	programs.nix-ld = {
-		enable = true;
-	};
+  programs.pay-respects = {
+    enable = true;
+    alias = "fcm";
+  };
 
-	programs.appimage = {
-		enable = true;
-		binfmt = true;
-	};
+  programs.nix-ld = {
+    enable = true;
+  };
 
-	nixpkgs.config = {
-		allowUnfree = true;
-	};
+  programs.appimage = {
+    enable = true;
+    binfmt = true;
 
-	programs.niri = {
-		enable = true;
-	};
+    package = pkgs.appimage-run.override {
+      extraPkgs = pkgs: with pkgs; [
+        libepoxy
+        libGL
+        libxkbcommon
+        vulkan-loader
+      ];
+    };
+  };
 
-	programs.hyprland = {
-		enable = true;
-	};
+  nixpkgs.config = {
+    allowUnfree = true;
+  };
 
-	programs.nh = {
-		enable = true;
-	};
+  programs.niri = {
+    enable = true;
+  };
 
-	programs.zsh = {
-		enable = true;
-	};
+  programs.hyprland = {
+    enable = true;
+  };
+
+  programs.nh = {
+    enable = true;
+  };
+
+  programs.zsh = {
+    enable = true;
+  };
+  
 }
+

@@ -11,11 +11,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1794549950,
-        "narHash": "sha256-CwnkJOnUNZB2jQGz5824L0myBtvmc98OyrwJvZgcT5s=",
+        "lastModified": 1795157092,
+        "narHash": "sha256-iOrD/bs7ptE14yhusgKTib1jB8AndKbxDNQg5aqYgUE=",
         "ref": "refs/heads/main",
-        "rev": "9ab901f592917454da396ea012c50dd2c3f37003",
-        "revCount": 737,
+        "rev": "8b8b88377799df0dd9d0f6f6d4ae1db36ecc987e",
+        "revCount": 742,
         "type": "git",
         "url": "https://gh-proxy.org/https://github.com/caelestia-dots/cli"
       },
@@ -34,11 +34,11 @@
         "quickshell": "quickshell"
       },
       "locked": {
-        "lastModified": 1794252006,
-        "narHash": "sha256-dDioSQ6KGL6A7/lFlYN/NzGHWLvZbRG6JqRjaDadpBE=",
+        "lastModified": 1795181824,
+        "narHash": "sha256-TxIlKT2ptpGp9MlyAk3Oj+znwHxBwiqwWuN5wjCAjfc=",
         "ref": "refs/heads/main",
-        "rev": "fd630ffedd45eb31817e9a1726a0f567e79f65e2",
-        "revCount": 2724,
+        "rev": "0e6da612b9d02bd01b3c95169f0867114f5780b9",
+        "revCount": 2726,
         "type": "git",
         "url": "https://gh-proxy.org/https://github.com/caelestia-dots/shell"
       },
@@ -69,10 +69,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1794278858,
-        "narHash": "sha256-rkrJwLgLSHBnXfgoSKIDa+2LLGdTqynsV3GAxOTGhUU=",
+        "lastModified": 1794963576,
+        "narHash": "sha256-+CPrP74GDJ63f7bgEFC9Av4hbxc7K9WUNv1ZVRifRe8=",
         "ref": "master",
-        "rev": "82ce401aa350502897c3f2e85f384d61cd3b0b6d",
+        "rev": "2b13c9cb3aa20653e6f8ee0b7f8331a53ea9b0a9",
         "shallow": true,
         "type": "git",
         "url": "https://gh-proxy.org/https://github.com/nix-community/home-manager.git"
@@ -136,11 +136,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1794648467,
-        "narHash": "sha256-OEgEsgaqBIx0P1iWT6uQ6MqSw+j/Xf1LpGO14HdPmYA=",
+        "lastModified": 1795180198,
+        "narHash": "sha256-wRGr9GTB65vohX5wjmwbj+6KbuheGHW7oaWFNUDAGcw=",
         "owner": "metasequoiaime",
         "repo": "msime",
-        "rev": "a23beb07161d04096055d7c407a7148e059a237a",
+        "rev": "7eba1362e254536629405e43233e807a44bff143",
         "type": "github"
       },
       "original": {
@@ -151,10 +151,10 @@
     },
     "nixpkgs-unstable": {
       "locked": {
-        "lastModified": 1794495034,
-        "narHash": "sha256-E0hYoioqUtM2XmPPvYYpJgdADF5AW9oOoPSEiM9dTHQ=",
+        "lastModified": 1795155813,
+        "narHash": "sha256-9dFqyDnQ8fKpkdv5pha+S7qR1HXIiJ8Ndkv+CXDzJu8=",
         "ref": "nixpkgs-unstable",
-        "rev": "2074cc672349f14240fb7ea90d509e0b643e9dd4",
+        "rev": "b758f1622588b4d5ce019971748a68be80e5943c",
         "shallow": true,
         "type": "git",
         "url": "https://mirrors.tuna.tsinghua.edu.cn/git/nixpkgs.git"
@@ -173,10 +173,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1794626679,
-        "narHash": "sha256-6CcXjs7GWM9C1asbHSAmfM++ut9jM77nHIXz3FM3hHg=",
+        "lastModified": 1795184512,
+        "narHash": "sha256-3Bt4df3TM7shQGxQbSDBjYk74oemNvRl4KT3DmLZGF4=",
         "ref": "cachix",
-        "rev": "4933674079ecf7545cc23cd5f1cd77c3e74f8e09",
+        "rev": "a5444b9a2c2bc7c1aed5c59298a268e45de14055",
         "shallow": true,
         "type": "git",
         "url": "https://gh-proxy.org/https://github.com/noctalia-dev/noctalia.git"

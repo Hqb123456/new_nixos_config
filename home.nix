@@ -37,6 +37,7 @@
 			xdotool      # 用于窗口操作
 			qt6.qtwayland
 			zsh-syntax-highlighting # zsh 插件：语法高亮
+			wechat
 			(bilibili.overrideAttrs {
 			 version = "1.19.0-3";
 			 src = fetchurl {
@@ -54,7 +55,7 @@
 
 		oh-my-zsh = {
 			enable = true;
-			plugins = [ "sudo" "git" "z" "extract" "fzf" "docker" "colored-man-pages" "history-substring-search" "web-search"]; # 按需添加插件
+			plugins = [ "sudo" "git" "z" "extract" "fzf" "docker" "colored-man-pages" "history-substring-search" "web-search" "aliases" "copypath" "dirhistory" "zsh-navigation-tools"]; # 按需添加插件
 				theme = "junkfood";        # 指定主题
 		};
 	};

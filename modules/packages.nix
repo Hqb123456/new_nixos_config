@@ -2,7 +2,7 @@
 
 {
 	environment.systemPackages = with pkgs; [
-		nix-index
+			nix-index
 			winboat
 			nvd
 			gpu-screen-recorder
