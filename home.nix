@@ -11,7 +11,9 @@
 
 # 安装软件包
 	home.packages = with pkgs; [
-		onlyoffice-desktopeditors
+			opencode-desktop
+			vscode
+			onlyoffice-desktopeditors
 			spotify
 			vlc
 			folia-major
