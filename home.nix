@@ -11,7 +11,9 @@
 
 # 安装软件包
 	home.packages = with pkgs; [
-		vlc
+		onlyoffice-desktopeditors
+			spotify
+			vlc
 			folia-major
 			ghostty
 			hmcl
