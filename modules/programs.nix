@@ -56,6 +56,7 @@
 
   programs.nh = {
     enable = true;
+    flake="/home/shorin/nixos/";
   };
 
   programs.zsh = {
